@@ -1,0 +1,14 @@
+<div id="form">
+  <h2>Edit Room</h2>
+ 
+  <form action="/room/{{roomDetails.id}}/edit" method="POST">
+    <input type="text" name="name" placeholder="Name" value="{{roomDetails.name}}" required/>
+    <input type="text" name="description" placeholder="Description" value="{{roomDetails.description}}" required/>
+    <input type="text" name="imageUrl" placeholder="Image URL" value="{{roomDetails.imageUrl}}">
+    <button type="submit">Edit Room</button>
+{{!--  
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}} --}}
+  </form>
+</div>

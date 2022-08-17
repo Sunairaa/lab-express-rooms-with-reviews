@@ -1,0 +1,14 @@
+<h2>Room List</h2>
+{{#each roomsList}}
+    <h2>Room Name: {{name}}</h2>
+    <p>Room Description: {{description}}</p>
+    <img src="{{imageUrl}}" width="100" height="120" alt="room-image">
+    <p>Owner: {{owner.fullName}}</p>
+    {{!-- {{#if username}} --}}
+        <a href="/room/{{_id}}/edit">Edit</a>
+        <form action="/room/{{id}}/delete" method="POST">
+            <button>Delete</button>
+        </form>
+        {{!-- <a href="/room/{{_id}}/delete">Delete</a> --}}
+    {{!-- {{/if}} --}}
+{{/each}}
